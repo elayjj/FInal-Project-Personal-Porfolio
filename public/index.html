@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #2980b9;
+}
+
+
+/* Profile Section */
+#about {
+    display: flex;
+    justify-content: left; /* Center both profile picture and description */
+    align-items: left;
+    padding: 40px 20px;
+    background-color: #ffebd9; /* Light background for the profile section */
+}
+
+.profile-pic {
+    margin-right: 40px; /* Add space between the image and the description */
+}
+
+.profile-pic img {
+    width: 150px; /* Set a consistent width for the image */
+    height: 150px;
+    border-radius: 50%; /* Make it a circular profile picture */
+    object-fit: cover;
+}
+
+.profile-description {
+    max-width: 600px; /* Limit the description width for readability */
+    text-align: left;
+}
+
+.profile-description h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-description p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* About Section */
+#about {
+    background-color: #d1e7ff;
+    padding: 50px 20px;
+}
+
+#about h2 {
+    color: #333;
+}
+
+#about p {
+    color: #666;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+/* About Section */
+#about {
+    background-color: #d1e7ff;
+    padding: 50px 20px;
+}
+
+#about h2 {
+    color: #333;
+}
+
+#about p {
+    color: #666;
+    max-width: 600px;
+    margin: auto;
+}
+/* Skills Section */
+.skills {
+    padding: 40px 20px;
+    background: #d1e7ff;
+}
+
+.skills h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h4 {
+    font-size: 18px;
+    color: #3498db;
+}
+
+
+/* Projects Section */
+#projects {
+    background: #d1e7ff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#projects h2 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.projects-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column; /* Make the content stack vertically */
+    justify-content: flex-start;
+    align-items: center; /* Center align the content */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;  /* Make the image responsive */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Space between image and description */
+}
+
+.project-info {
+    text-align: center; /* Center-align the text */
+}
+
+.project-info h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.project-info p {
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #d1e7ff; /* Light background color for contrast */
+    padding: 40px 20px; /* Add padding for spacing */
+    text-align: center; /* Center all text */
+}
+
+#contact h3 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    color: #666;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.social-icons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center; /* Center the social icons horizontally */
+    gap: 20px; /* Space between the icons */
+}
+
+.social-icons a img {
+    width: 40px; /* Set a fixed size for the icons */
+    height: 40px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills .card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+</style>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="image/SVFC.jpg" alt="Logo" class="logo-img">
+          
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <!-- About and Profile Section -->
+<section id="about" class="profile">
+    <div class="profile-pic">
+        <img src="image/prof pic.jpg" alt="Profile Picture">
+    </div>
+    <div class="profile-description">
+        <h2>About Me</h2>
+        <p>My name is Elijah Madonna, Major in Bachelor of Science</p>
+        <p>in Information Technology Currently learning Python, Figma,</p>
+        <p>Data Structures (Dictionaries and Lists)</p>
+    </div>
+</section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h3>Skills</h3>
+        <div class="card-container">
+            <div class="card">
+                <img src="image/PHP.png" alt="PHP">
+                <h4>PHP</h4>
+            </div>
+            <div class="card">
+                <img src="image/c++.png" alt="C++">
+                <h4>C++</h4>
+            </div>
+            <div class="card">
+                <img src="image/java.png" alt="Java">
+                <h4>Java</h4>
+            </div>
+            <div class="card">
+                <img src="image/css.jpg" alt="CSS">
+                <h4>CSS</h4>
+            </div>
+            <div class="card">
+                <img src="image/css.jpg" alt="C#">
+                <h4>C#</h4>
+            </div>
+            <div class="card">
+                <img src="image/python 1.png" alt="Python">
+                <h4>Python</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="projects-cards">
+        <!-- Project Card 1 -->
+        <div class="project-card">
+            <img src="image/business.jpg" alt="Business Website">
+            <div class="project-info">
+                <h3>Business Website</h3>
+                <p>A website built for a small business, featuring product listings and customer interaction.</p>
+            </div>
+        </div>
+        
+        <!-- Project Card 2 -->
+        <div class="project-card">
+            <img src="image/personal.png" alt="Personal Website">
+            <div class="project-info">
+                <h3>Personal Website</h3>
+                <p>This personal website showcases my skills, projects, and contact information.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Contact Section -->
+<section id="contact" class="contact">
+    <h3>Contact</h3>
+    <p>Email: layymadonna@gmail.com</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="image/fbb.png" alt="Facebook">
+        </a>
+        <a href="https://x.com/?lang=en" target="_blank">
+            <img src="image/x.jpg" alt="X">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+            <img src="image/ig.jpg" alt="Instagram">
+        </a>
+    </div>
+    <p>Copyright layjmadonna 2024, All Right Reserved</p>
+</section>
+
+
+</body>
+</html>
